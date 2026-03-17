@@ -1,0 +1,15 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+app/.next
+app/out
+app/build
+app/.env*.local
+app/yarn.error.log
+app/npm-debug.log*
+app/yarn-debug.log*
+app/yarn-error.log*
