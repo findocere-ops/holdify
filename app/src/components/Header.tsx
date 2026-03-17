@@ -29,8 +29,14 @@ export function Header() {
           <NextLink href="/sol" className="nav-link" data-active={pathname.startsWith('/sol')}>
             SOL Track
           </NextLink>
+          <NextLink href="/chat" className="nav-link" data-active={pathname === '/chat'}>
+            AI Chat
+          </NextLink>
           <NextLink href="/credits" className="nav-link" data-active={pathname === '/credits'}>
             Credits
+          </NextLink>
+          <NextLink href="/api-keys" className="nav-link" data-active={pathname === '/api-keys'}>
+            API Keys
           </NextLink>
           <NextLink href="/analytics" className="nav-link" data-active={pathname === '/analytics'}>
             Analytics

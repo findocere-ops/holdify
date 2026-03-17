@@ -2,6 +2,7 @@
 
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import NextLink from 'next/link';
 
 export default function CreditLedgerDashboard() {
   const { connected } = useWallet();
@@ -50,13 +51,39 @@ export default function CreditLedgerDashboard() {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
-                <button className="btn btn-primary" style={{ padding: '12px 32px' }}>
-                  Top Up
-                </button>
+              <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                <NextLink href="/chat">
+                  <button className="btn btn-gradient" style={{ padding: '12px 32px' }}>
+                    Start Chatting
+                  </button>
+                </NextLink>
+                <NextLink href="/api-keys">
+                  <button className="btn btn-primary" style={{ padding: '12px 32px' }}>
+                    Get API Key
+                  </button>
+                </NextLink>
                 <button className="btn btn-glass" style={{ padding: '12px 32px' }}>
                   Withdraw USDC
                 </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Powered By */}
+          <div className="glass-card" style={{ padding: '24px' }}>
+            <h3 style={{ fontSize: '16px', marginBottom: '16px', color: 'var(--accent)' }}>Powered By</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
+              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '12px' }}>
+                <div style={{ fontWeight: 600, marginBottom: '4px' }}>OpenRouter</div>
+                <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
+                  Access 400+ AI models — Claude, GPT-4o, Gemini, Llama, and more through one unified API.
+                </div>
+              </div>
+              <div style={{ background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '12px' }}>
+                <div style={{ fontWeight: 600, marginBottom: '4px' }}>RTK Optimization</div>
+                <div style={{ fontSize: '13px', color: 'var(--text-secondary)' }}>
+                  60-90% token savings via RTK. Your yield covers more AI usage automatically.
+                </div>
               </div>
             </div>
           </div>
