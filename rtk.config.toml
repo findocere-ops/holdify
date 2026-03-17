@@ -1,0 +1,18 @@
+# RTK Configuration for Holdify
+# Reduces LLM token consumption by 60-90%, so users spend less LST yield on AI.
+# Install: curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh
+# Setup:  rtk init --global
+
+[tracking]
+# Token savings are tracked locally
+# database_path = "~/.local/share/rtk/holdify.db"
+
+[hooks]
+# Commands that should bypass RTK filtering
+exclude_commands = ["anchor", "solana"]
+
+[tee]
+# Save full output on failures for debugging
+enabled = true
+mode = "failures"
+max_files = 20
